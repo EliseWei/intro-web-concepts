@@ -34,7 +34,7 @@ body {
   background: radial-gradient(center, circle cover, #f2f2f2 0%, white 100%);
   background: white;
   width: 100%;
-  margin: 0 auto;
+  margin: 20px auto;
    }
 
 .reveal {
