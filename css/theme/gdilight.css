@@ -26,14 +26,16 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: white;
   background: -moz-radial-gradient(center, circle cover, #f2f2f2 0%, white 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f2f2f2), color-stop(100%, white));
   background: -webkit-radial-gradient(center, circle cover, #f2f2f2 0%, white 100%);
   background: -o-radial-gradient(center, circle cover, #f2f2f2 0%, white 100%);
   background: -ms-radial-gradient(center, circle cover, #f2f2f2 0%, white 100%);
   background: radial-gradient(center, circle cover, #f2f2f2 0%, white 100%);
-  background-color: white; }
+  background: white;
+  width: 100%;
+  margin: 40px auto;
+   }
 
 .reveal {
   font-family: "Gotham-Book", "Helvetica", Arial, sans-serif;
@@ -100,7 +102,9 @@ body {
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
-  transition: all .2s linear; }
+  transition: all .2s linear; 
+  width: auto;
+  }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
