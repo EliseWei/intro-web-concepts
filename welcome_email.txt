@@ -1,0 +1,21 @@
+<subject>Girl Develop It: Intro to Web Concepts [DATE] - Welcome!</subject>
+
+Dear GDI attendees!
+
+I hope you're all looking forward to class as much as I am.
+
+First, some very important instructions about the location:
+
+[INSERT VENUE, TRANSIT, PARKING INSTRUCTIONS]
+
+A few other things to be aware of:
+
+You are encouraged to ask questions! Feel free to bring a list.
+- I intend to be flexible with the lesson plan, focusing on topics you have mentioned in your survey responses. In addition, you can let me know via email or at the start of class if there is anything in particular you want to be sure we cover or any extra topics you were hoping for a glimpse of.
+F- or figuring out how a web page works, I typically use the Dev Tools native to Chrome, and I will do a brief demo of this during class. If you'd like to follow along on your own machine, you can find the Chrome Dev Tools under View > Developer, or opt + cmd + i on a Mac. Not required!
+- This class is a lecture format, so you don't need to bring a computer. You are welcome to bring a laptop for taking notes, if you wish, but outlets may be at a premium, depending on how we're set up, so a full battery is a good idea.
+- If you'd like to follow along with the slides, you can access them here [http://gdiphilly.github.io/intro-web-concepts/]
+- If you'd like to connect with me, your classmates, or other GDI students (before or after class), we encourage you to join our Slack chat community [http://goo.gl/forms/Qk1hqLxXtU].
+
+Please get in touch with any other questions, and I'm excited to meet you all!
+Elise
