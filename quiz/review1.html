@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Intro to Web Concepts - Review 1</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="Girl Develop It">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" href="reveal/css/reveal.css">
+        <link rel="stylesheet" href="reveal/css/theme/gdisunny.css" id="theme">
+        <link rel="stylesheet" href="css/slides.css">
+        <link rel="stylesheet" href="quizBuilder.css">
+
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+            </div>
+
+        </div>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.min.js"></script>
+        <script src="quizBuilder.js"></script>
+
+        <script>
+            var quizOpts = {
+                showResponsesCorrect: true,
+                generateNonce: false
+            };
+            quizInit('review1.xml', '.slides', quizOpts);
+        </script>
+
+    </body>
+</html>

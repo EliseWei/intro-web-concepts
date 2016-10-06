@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to jQuery ~ Girl Develop IT</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdisunny.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+
+    <!-- For the slides -->
+    <link rel="stylesheet" href="css/slides.css">
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			  <!-- Prologue slide -->
+        <section>
+          <p><span class="blue">Wifi</span>: IndyHall 2.4ghz / coworking</p>
+          <p><span class="blue">Slides &amp; files</span>: http://www.elitepeers.com/gdi/</p> 
+        </section>
+        <!-- Opening slide -->
+        <section>
+          <img src="images/gdi_logo_badge.png" style="width: 400px;">
+          <h3>Intro to jQuery</h3>
+        </section>
+
+        <!-- Welcome-->
+        <section>
+          <h3>Welcome!</h3>
+          <div class="left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class="blue">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>Welcome!</h3>
+          <div class="left-align">
+          <p class="blue">Tell us about yourself.</p>
+          <ul>
+            <li>Who are you?</li>
+            <li>What do you hope to get out of the class?</li>
+            <li>What is your superpower?</li>
+          </ul>
+          </div>
+        </section>
+
+        <!-- Basics-->
+        <section>
+          <h3>What is jQuery?</h3>
+          <p class="center">A javascript library</p>
+          <div class='fragment' style='margin-top:40px;'>
+            <h3>Ok, what is a library?</h3>
+            <p class="center">A collection of functions</p>
+          </div>
+          <div class="fragment" style='margin-top:40px;'>
+            <h3>So, what are functions?</h3>
+            <p class="center">Reusable pieces of code that do something and may return a value. Can contain other functions.</p>
+          </div>
+        </section>
+        <section>
+          <h3>The purpose of jQuery</h3>
+          <ul>
+            <li>Write less code for common tasks</li>
+            <li>Cross-browser uniformity</li>
+            <li>Not meant to replace an understanding of javascript</li>
+          </ul>
+        </section>
+        <section>
+          <h3>The jQuery base library includes...</h3>
+          <ul>
+            <li>Data manipulation</li>
+            <li>DOM manipulation</li>
+            <li>Events</li>
+            <li>Effects and animation</li>
+            <li>AJAX</li>
+          </ul>
+        </section>
+
+        <!-- Examples -->
+        <section>
+          <h3>Example: Raw JS (full&nbsp;browser&nbsp;support)</h3>
+<pre><code class="javascript" style="line-height:1.35em;">var p = document.createElement('p');
+p.appendChild(document.createTextNode('Welcome!'));
+p.style.cssFloat = 'left';
+p.style.styleFloat = 'left';
+p.style.backgroundColor = 'red';
+p.className += ' special';
+var divs = document.getElementsByTagName('div');
+for (var i = 0; i < divs.length; i++){
+  var div = divs[i];
+  if(/\bheader\b/.test(div.className)){
+    div.appendChild(p);
+    break;
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h3>Example: Raw JS (IE9+)</h3>
+<pre><code class="javascript" style="line-height:1.35em;">var p = document.createElement('p');
+p.textContent = 'Welcome!';
+p.style.cssFloat = 'left';
+p.style.backgroundColor = 'red';
+p.className += ' special';
+document.querySelector('div.header').appendChild(p);</code></pre>
+        </section>
+        <section>
+          <h3>Example: jQuery</h3>
+          <pre><code class="javascript">$('&lt;p&gt;Welcome!&lt;/p&gt;')
+.css({'float': 'left', 'background-color': 'red'})
+.addClass('special')
+.appendTo('div.header');</code></pre>
+        </section>
+        <section>
+          <h3>Try them both</h3>
+          <p>In your dev tools console...</p>
+          <ul>
+            <li>On the sample html file (jQueryDemo.html)</li>
+            <li class="fragment">On <a href="http://www.girldevelopit.com/chapters/philadelphia" target="_blank">GDI Philly's chapter page</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Why not use jQuery?</h3>
+          <ul>
+            <li class="fragment">You want to understand how it really works</li>
+            <li class="fragment">Sometimes it's faster to write your own than to customize (plugins)</li>
+            <li class="fragment">Page weight&mdash;it likely includes stuff you don't need</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Including jQuery</h3>
+          <ul>
+            <li>Use a &lt;script&gt; tag</li>
+            <li class="fragment">Download and serve
+              <ul>
+                <li>Allows you to work locally without an internet connection</li>
+                <li>May be faster than a cdn</li>
+                <li>Good for development</li>
+              </ul>
+            </li>
+            <li class="fragment">Use a content distribution network
+              <ul>
+                <li>User may have it cached, saves on page weight</li>
+                <li>http://code.jquery.com/jquery-1.10.2.min.js</li>
+                <li>Good for production</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Including jQuery</h3>
+          <ul>
+            <li>Can be included at the bottom of your html content</li>
+            <li>Or, if included in the head, code you want to run when content is complete needs to be inside a document.ready function (more on this later)</li>
+          </ul>
+          <pre class="fragment"><code class="javascript">$(document).ready(function() {
+  // Handler for .ready() called.
+});</code></pre>
+        </section>
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Include the script on the sample page, either in the head or at the end of the body</li>
+            <li>Now try the jQuery command from before</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Scripting</h3>
+          <ul>
+            <li>Experiment in your dev tools console</li>
+            <li>Anything you want to keep goes into your file</li>
+          </ul>
+        </section>
+
+        <!-- Nuts and bolts -->
+        <section>
+          <h3>Anatomy of a jQuery call</h3>
+          <div class="fragment">
+            <p>This HTML...</p>
+            <pre><code class="html">&lt;p&gt;Welcome!&lt;/p&gt;</code></pre>
+          </div>
+          <div class="fragment">
+            <p>with this jQuery...</p>
+            <pre><code class="javascript">$('p').addClass('special');</code></pre>
+          </div>
+          <div class="fragment">
+            <p>results in this HTML...</p>
+            <pre><code class="html">&lt;p class="special"&gt;Welcome!&lt;/p&gt;</code></pre>
+          </div>
+        </section>
+        <section id="anatomy2" class="twoColumns">
+          <h3>Anatomy of a jQuery call</h3>
+          <pre><code class="javascript">$('p').addClass('special');</code></pre>
+          <p class="fragment"><span class="blue left">$()</span> <span>Global jQuery function. Alternately "jQuery()"</span></p>
+          <p class="fragment"><span class="blue left">'p'</span> <span>Argument being passed into the global jQuery function. In this case, a selector to return all 'p' elements. Also accepts variables and html strings. Returns a jQuery collection/object</span></p>
+          <p class="fragment"><span class="blue left">.</span> <span>We'll get back to this</span></p>
+          <p class="fragment"><span class="blue left">addClass('')</span> <span>jQuery method to add the specified class to each element in the collection. <a href="http://api.jquery.com/addClass/">http://api.jquery.com/addClass/</a></span></p>
+        </section>
+        <section id="selectors" class="twoColumns">
+          <h3>Selectors</h3>
+          <p>All CSS selectors are valid, plus some extras</p>
+          <p class="fragment"><span class="blue left">a</span> <span>all anchors</span></p>
+          <p class="fragment"><span class="blue left">.blue</span> <span>elements with the class "blue"</span></p>
+          <p class="fragment"><span class="blue left">p:eq(2)</span> <span>the third paragraph (zero-based count)</span></p>
+          <p class="fragment"><span class="blue left">[id^="vidLink_"]</span> <span>elements with an id beginning with "vidLink_"</span></p>
+          <p class="fragment"><span class="blue left">:contains("free")</span> <span>elements that contain the text "free" (case-sensitive)</span></p>
+          <p class="fragment center"><a href="http://api.jquery.com/category/selectors/">http://api.jquery.com/category/selectors/</a></p>
+        </section>
+        <section>
+          <h3>Let's Develop It</h3>
+          <p class="center">Select some elements in your sample file.</p>
+        </section>
+
+
+        <!-- Digging in -->
+        <section>
+          <h3>Filters</h3>
+          <p>Filters create a new jQuery collection from members of an original collection that pass a check.</p>
+          <pre class="fragment"><code class="javascript">var collection = $('input');
+var inputNotRadio = $(collection).not('[type="radio"]');
+var inputError = $(collection).filter('.error');
+var inputIsPA = $(collection).filter(function(){
+  return $(this).val() === 'PA';
+});</code></pre>
+          <p class="fragment">Here is an example of passing a variable into the global jQuery function, rather than a selector.</p>
+          <p class="fragment">The original collection is <strong>not</strong> altered.</p>
+        </section>
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Assign a collection to a variable</li>
+            <li>Filter that collection and assign the result to a new variable</li>
+          </ul>
+        </section>
+        <section id="creating" class="twoColumns">
+          <h3>Creating Elements</h3>
+          <p><span class="blue left">$('&lt;p&gt;')</span> <span>&lt;p&gt;&lt;/p&gt;</span></p>
+          <p><span class="blue left">$('&lt;p class="intro"&gt;')</span> <span>&lt;p class="intro"&gt;&lt;/p&gt;</span></p>
+          <p><span class="blue left">$('&lt;p&gt;Welcome!&lt;/p&gt;')</span> <span>&lt;p&gt;Welcome!&lt;/p&gt;</span></p>
+          <ul class="fragment">
+            <li>An opening tag, alone, creates an empty element with the specified properties</li>
+            <li>A tag with content creates html, as written</li>
+          </ul>
+        </section>
+        <section id="reading" class="twoColumns">
+          <h3>Reading elements &amp; their properties</h3>
+          <pre><code class="html">&lt;a href="http://www.google.com" style="color: green;"&gt;Google&lt;/a&gt;</pre></code>
+          <p><span class="blue left">$('a').html();</span> <span>"Google"</span></p>
+          <p><span class="blue left">$('a').attr('href');</span> <span>"http://www.google.com"</span></p>
+          <p><span class="blue left">$('a').css('color');</span> <span>"green"</span></p>
+          <p class="fragment" style="clear: both;">Read some properties of the link to Yasmine's email.</p>
+        </section>
+        <section>
+          <h3>Changing elements &amp; their properties</h3>
+          <pre><code class="html">&lt;a href="http://www.google.com" style="color: green;"&gt;Google&lt;/a&gt;</pre></code>
+          <p class="blue left">$('a').html('Yahoo!');</p>
+          <p class="blue left">$('a').attr('href', 'http://www.yahoo.com');</p>
+          <p class="blue left">$('a').css({'color': 'purple'});</p>
+        </section>
+        <section>
+          <h3>Chaining</h3>
+          <p>That same set of manipulations could be written as</p>
+          <pre><code class="javascript">$('a').html('Yahoo')
+.attr('href','http://www.yahoo.com')
+.css({'color':'purple'});</code></pre>
+          <p class="fragment">because each jQuery function returns the collection again.</p>
+          <p class="fragment">This is called "chaining" and is done with a period between method calls.</p>
+          <p class="fragment">Chaining is a widely appreciated feature of jQuery.</p>
+        </section>
+        <section>
+          <h3>Ok, but...</h3>
+          <p>This works great when we know there is only one link.</p>
+          <p class="fragment">Run <span class="blue">$('a').append('!');</span> and see what happens.</p>
+          <p class="fragment">We need a better selector, if we want to affect one out of many.</p>
+        </section>
+        <section>
+          <h3>Looping</h3>
+          <ul>
+            <li>Many built-in methods include implicit iteration</li>
+            <li>Explicit iteration is for more complex tasks to be run on each member of a collection</li>
+          </ul>
+          <pre class="fragment"><code class="javascript">$('img.profile-pic').each(function(index){
+  if($(this).width() < $(this).height()){
+    $(this).css({'border':'solid 3px red'});
+  } else {
+      $(this).css({'border':'solid 3px blue'});
+  }
+});</code></pre>
+          <p class="fragment">What does this function do?</p>          
+        </section>
+        <section>
+          <h3>Index and This</h3>
+          <p><span class="blue">index</span>: the function supplied to "each" is automatically passed the number of the current loop iteration, which will generally match the index of each member of the collection.</p>
+          <p class="fragment"><span class="blue">this</span>: "this" is the context of any function. Frequently in jQuery, "this" will refer to the element being pointed to by the iterator.</p>
+          <p class="fragment">Other built-in methods are sometimes passed other pertinent data.</p>
+        </section>
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>For all links to twitter, add an external icon to the end of the anchor content, and make the text blue.</p>
+          <pre class="fragment" style="width:92%;"><code class="javascript">$('a[href*="twitter"]').append('&lt;img src="assets/externalicon.png" /&gt;')
+  .css({'color':'blue'});</code></pre>
+          <p class="fragment">Problems with this:</p>
+          <ul class="fragment">
+            <li>Separation of concerns</li>
+            <li>Maintainability</li>
+          </ul>
+          <p class="fragment">Much better to apply classes than to granularly add styles and change content.</p>
+        </section>
+
+        <!-- Interaction -->
+        <section>
+          <h3>Interaction</h3>
+          <p class="center">The bread and butter of jQuery.</p>
+        </section>
+        <section>
+          <h3>Events</h3>
+          <ul>
+            <li>click</li>
+            <li>mouseEnter / Leave (hover)</li>
+            <li>submit</li>
+            <li>scroll / resize</li>
+            <li>Many more: <a href="http://api.jquery.com/category/events/">http://api.jquery.com/category/events/</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Binding handlers</h3>
+          <p>We use the "on" method to bind a handler to an event. <a href="http://api.jquery.com/on/">http://api.jquery.com/on/</a></p>
+          <pre><code class="javascript">function onButtonClick() {
+  console.log('clicked!');
+}
+
+$('#button').on('click', onButtonClick);</code></pre>
+          <div class="fragment">
+            <p>Or more succinctly</p>
+            <pre><code class="javascript">$('#button').on('click', function () {
+  console.log('clicked!');
+});</code></pre>
+          </div>
+        </section>
+        <section>
+          <h3>Binding handlers</h3>
+          <p>You can also...</p>
+          <pre><code class="javascript">$('a').on('click', function (event) {
+  event.preventDefault();
+  console.log('Not going there!');
+});</code></pre>
+          <p class="fragment"><span class="blue">event</span>: event handlers are typically passed the event that has triggered them, and that data can then be used by the handler. See info on the event object: <a href="http://api.jquery.com/category/events/event-object/">http://api.jquery.com/category/events/event-object/</a></p>
+        </section>
+        <section>
+          <h3>Try it</h3>
+          <p>Add console.log messages on mouseEnter/mouseLeave for all names</p>
+        </section>
+        <section>
+          <h3>Document Readiness</h3>
+          <p>Most everything you want to do with jQuery requires the DOM to be fully loaded.</p>
+          <p>The browser renders the markup from top to bottom, then triggers a DOMReady event.</p>
+          <pre><code class="javascript">$(document).ready(function() {
+  // Handler for .ready() called.
+});</code></pre>
+<pre><code class="javascript">$(function() {
+  // Handler for .ready() called.
+});</code></pre>
+        </section>
+        <section>
+          <h3>Built-in Effects &amp; Animation</h3>
+          <ul>
+            <li class="fragment">show / hide / toggle</li>
+            <li class="fragment">slideUp / slideDown / slideToggle</li>
+            <li class="fragment">fadeIn / fadeOut / fadeToggle / fadeTo</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Animation controls</h3>
+          <ul>
+            <li class="fragment">delay</li>
+            <li class="fragment">stop</li>
+            <li class="fragment">finish</li>
+            <li class="fragment">queue</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Custom Animation</h3>
+          <p class="blue">.animate( properties [, duration ] [, easing ] [, complete ] );</p>
+          <pre><code class="javascript">$('p.special').animate(
+  {height:'500',fontSize:'3em'},
+  4000,
+  'linear', 
+  function(){
+    alert('done!');
+  }
+);</code></pre>
+        </section>
+        <section>
+          <h3>Try it</h3>
+          <p>When clicking a profile photo, hide, show, or animate the contact info.</p>
+          <pre class="fragment"><code class="javascript">$('.profile-pic').on('click',function(){
+  $(this).siblings('.contact').slideToggle('slow');
+});</code></pre>
+          <ul>
+            <li class="fragment">Be mindful of what a user will see without javascript</li>
+            <li class="fragment">A lot of these features are possible through CSS3, but jQuery is supported on older browsers</li>
+            <li class="fragment">Also, jQuery allows you to trigger effects on elements other than the one being interacted with</li>
+          </ul>
+        </section>
+        <section>
+          <h3>jQuery UI &amp; Plugins</h3>
+          <ul>
+            <li>jQuery UI offers more advanced interaction methods. Very well documented</li>
+            <li>jQuery is open source and widely used, so there are many many plugins available (of varying quality and levels of documentation)</li>
+            <li>date pickers, slideshows, and accordions (oh my!)</li>
+          </ul>
+          <p class="center"><a href="http://plugins.jquery.com/">http://plugins.jquery.com/</a></p>
+        </section>
+        <section>
+          <h3>Using Plugins</h3>
+          <ul>
+            <li>Download the plugin and associated files from the site or github repo</li>
+            <li>Copy them into your project folder</li>
+            <li>In the HTML, reference any associated CSS files</li>
+            <li>In the HTML, add a script tag for the jQuery plugin itself</li>
+            <li>In the JavaScript, call the jQuery plugin on your DOM</li>
+        </section>
+        <section>
+          <h3>Try it</h3>
+          <p>Add the "sortable" functionality from jQuery UI to the nav links.</p>
+          <p class="center"><a href="http://jqueryui.com/sortable/">http://jqueryui.com/sortable/</a></p>
+        </section>
+        <section>
+          <h3>AJAX</h3>
+          <ul>
+            <li>Asynchronous javascript and XML</li>
+            <li>Used for any communication to the servers without a page refresh
+                <ul>
+                  <li>form submissions</li>
+                  <li>adding items to your shopping cart</li>
+                  <li>updating twitter/facebook feeds</li>
+                </ul>
+            </li>
+            <li>jQuery ajax method allows for JSONP</li>
+          </ul>
+          <p class="center"><a href="http://api.jquery.com/category/ajax/">http://api.jquery.com/category/ajax/</a></p>
+        </section>
+        <section>
+          <h3>Try it</h3>
+          <p>Look at GDI ajax request to meetup</p>
+        </section>
+        <section>
+          <h3>Summary</h3>
+          <ul>
+            <li>jQuery is a well-documented library of ready-made javascript functions</li>
+            <li>Can be used to get and change info about html elements or create new elements</li>
+            <li>Best employed to enrich user interactions</li>
+            <li>Widely used for its simple AJAX functionality</li>
+            <li>Many plugins are available in the open source community. Contribute your own!</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h2>Questions?</h2>
+          <div style="font-size:1200%; height:100%; margin-top:30%" class="blue">?
+            <div class="clear"></div></div>
+        </section>
+        <section>
+          <h2>Survey</h2>
+          <p class="center"><a href="http://bit.ly/gdi-jquery">http://bit.ly/gdi-jquery</a></p>
+        </section>
+			</div>
+  		<footer>
+        <div class="copyright">
+          Intro to jQuery ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+        rollingLinks: false,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

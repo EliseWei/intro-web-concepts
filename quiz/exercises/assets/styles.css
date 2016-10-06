@@ -1,0 +1,25 @@
+* {font-size: 13px; font-family: Arial; color: #555555; margin: 0; padding: 0;}
+html {height: 101%;}
+body {background: teal; padding: 0px 20px;}
+a {text-decoration: none; font-weight: bold; color: #f05b62;}
+a:hover {text-decoration: underline;}
+h2 {margin: 10px; display: inline-block; float: left; font-size: 2.3em;}
+h3 {font-size: 2em; margin-bottom: .8em;}
+h4 {font-size: 1.5em;}
+#wrapper {margin: 0 auto; max-width: 990px; background: #fffff5;}
+nav {overflow: auto; padding-top: 10px;}
+nav ul { float: right; overflow: auto;}
+nav ul li {list-style: none; float: left; margin-right: 2em;}
+#main {padding: 40px;}
+article {margin: 0 0 30px; overflow: auto; clear: both;}
+article h4 {margin-bottom: .7em;}
+.profile-pic {float: left; width: 187px; height: auto; border-radius: 15px; margin-right: 1em;}
+.bio p {font-size: 1.1em; margin-bottom: 1em; width: auto; max-width: 80%;}
+.contact h4 {font-size: 1.3em; margin-bottom: .4em;}
+footer {height: 50px;}
+
+@media (max-width: 700px) {
+	.profile-pic {margin: 0 0 20px;}
+	.bio p {clear: both;}
+	.contact {clear: left;}
+}

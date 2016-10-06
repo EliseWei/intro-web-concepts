@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<quiz>
+    <name>Intro to Web Concepts - Review 2</name>
+    <questions>
+        <question>
+            <q>The main consideration before building a site is...</q>
+            <answers>
+                <a>which languages to use</a>
+                <a>user experience</a>
+                <a correct="true">the purpose of the site</a>
+                <a>budget</a>
+            </answers>
+        </question>
+        <question>
+            <q>Which of the following is a possible benefit of a well-architected site?</q>
+            <answers>
+                <a>Deepen engagement</a>
+                <a>Increase conversion</a>
+                <a>Better search engine ranking</a>
+                <a correct="true">All of the above</a>
+            </answers>
+        </question>
+        <question>
+            <q>A sitemap is...</q>
+            <answers>
+                <a correct="true">an outline structure of the pages on your site</a>
+                <a>a flow chart depicting a series of choices available to a user</a>
+                <a>usually a larger, more powerful computer</a>
+                <a>open to contributions from anyone</a>
+            </answers>
+        </question>
+        <question>
+            <q>WYSIWYG stands for...</q>
+            <answers>
+                <a>Where You Steer Is Where You Go</a>
+                <a correct="true">What You See Is What You Get</a>
+                <a>What You So Intensely Wish You'd Gotten</a>
+            </answers>
+        </question>
+        <question>
+            <q>Which are you least likely to use, when building a simple web site?</q>
+            <answers>
+                <a>HTML</a>
+                <a>CSS</a>
+                <a>JavaScript</a>
+                <a correct="true">Java</a>
+            </answers>
+        </question>
+        <question>
+            <q>____ is the set of rules that define the combinations of symbols that are considered to be correctly structured programs.</q>
+            <answers>
+                <a>Protocol</a>
+                <a correct="true">Syntax</a>
+                <a>Specification</a>
+                <a>Framework</a>
+            </answers>
+        </question>
+        <question>
+            <q>Which of the following is not part of the most basic setup required for hand-coding a web site?</q>
+            <answers>
+                <a>a text editor</a>
+                <a>a web browser</a>
+                <a correct="true">a testing suite</a>
+                <a>an FTP client</a>
+            </answers>
+        </question>
+        <question>
+            <q>Who is a member of the "Front end" team?</q>
+            <answers>
+                <a correct="true">User Experience Designer</a>
+                <a>Database Admin</a>
+                <a>QA Engineer</a>
+                <a>Project Manager</a>
+            </answers>
+        </question>
+        <question>
+            <q>The 3 "R"s of hiring a developer are...</q>
+            <answers>
+                <a>Record, Restore, Report</a>
+                <a>Remember, Reach out, Review</a>
+                <a correct="true">References, Requirements, Reality</a>
+                <a>Reduce, Reuse, Recycle</a>
+            </answers>
+        </question>
+    </questions>
+    <scoring>
+        <score type="easy">
+            <min>0</min>
+            <max>100</max>
+            <description>Thank you!</description>
+        </score>
+    </scoring>
+</quiz>

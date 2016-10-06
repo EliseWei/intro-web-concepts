@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<quiz>
+    <name>Intro to Web Concepts - Review 1</name>
+    <questions>
+        <question>
+            <q>HTML is...</q>
+            <answers>
+                <a>code editing software</a>
+                <a correct="true">the code used to build the content of a site</a>
+                <a>a language used to describe presentation</a>
+                <a>for nerds</a>
+            </answers>
+        </question>
+        <question>
+            <q>Which of the following is a language used to define the style and appearance of a web site?</q>
+            <answers>
+                <a>DNS</a>
+                <a>CMS</a>
+                <a correct="true">CSS</a>
+                <a>SEO</a>
+            </answers>
+        </question>
+        <question>
+            <q>Which of the following services use cloud storage?</q>
+            <answers>
+                <a>Flickr</a>
+                <a>DropBox</a>
+                <a>GMail</a>
+                <a correct="true">all of the above</a>
+            </answers>
+        </question>
+        <question>
+            <q>Clients ______ files from the server.</q>
+            <answers>
+                <a correct="true">request</a>
+                <a>demand</a>
+                <a>copy</a>
+                <a>host</a>
+            </answers>
+        </question>
+        <question>
+            <q>The main clients discussed in web development are...</q>
+            <answers>
+                <a>bots</a>
+                <a>crawlers</a>
+                <a correct="true">browsers</a>
+                <a>command line interfaces</a>
+            </answers>
+        </question>
+        <question>
+            <q>The following is NOT a web browser...</q>
+            <answers>
+                <a>Internet Explorer</a>
+                <a correct="true">AJAX</a>
+                <a>Chrome</a>
+                <a>Safari</a>
+            </answers>
+        </question>
+        <question>
+            <q>Which of the following canNOT be parsed by a browser?</q>
+            <answers>
+                <a>HTML</a>
+                <a correct="true">Ruby</a>
+                <a>CSS</a>
+                <a>JavaScript</a>
+            </answers>
+        </question>
+        <question>
+            <q>Libraries are...</q>
+            <answers>
+                <a correct="true">a collection of programming shortcuts in one language</a>
+                <a>a set of acceptable rules for using a language</a>
+                <a>a combination of languages used together</a>
+                <a>a program meant to support the entire development process</a>
+            </answers>
+        </question>
+        <question>
+            <q>Java ______ just short for JavaScript</q>
+            <answers>
+                <a>is</a>
+                <a correct="true">is not</a>
+            </answers>
+        </question>
+        <question>
+            <q>Adhering to "web standards" includes...</q>
+            <answers>
+                <a>valid HTML, CSS, and JS</a>
+                <a>meeting accessibility standards</a>
+                <a>meeting semantic guidelines</a>
+                <a correct="true">all of the above</a>
+            </answers>
+        </question>
+    </questions>
+    <scoring>
+        <score type="easy">
+            <min>0</min>
+            <max>100</max>
+            <description>Good going! Ready for part 2?</description>
+        </score>
+    </scoring>
+</quiz>

@@ -1,0 +1,195 @@
+What is jQuery?
+	-a javascript library
+What is a library?
+	-a collection of reusable functions
+What is a function?
+	-reusable pieces of code that do something and may return a value. Can contain other functions.
+Purpose of jQuery
+	-write less code for common tasks
+	-cross-browser uniformity
+jQuery base library includes
+	-DOM manipulation
+	-Data manipulation
+	-AJAX
+	-Events
+	-Effects and animation
+Example
+	Raw: 
+		var p = document.createElement('p');
+		p.appendChild(document.createTextNode('Welcome!'));
+		p.style.float = 'left';
+		p.style.cssFloat = 'left';
+		p.style.styleFloat = 'left';
+		p.style.backgroundColor = 'red';
+		p.className += ' special';
+		document.querySelector('div.header').appendChild(p);
+		*Run in the console on your sample page.
+	jQuery:
+		var newP = $('<p>Welcome!</p>');
+		newP.css({'float': 'left', 'background-color': 'red'}).addClass('special').appendTo('div.header');
+		*Run in the console on your sample page.
+Why not?
+	-Want to learn how it really works
+	-Faster to write your own than to customize?
+	-Page weight. Likely includes stuff you don't need
+Including
+	-Use a <script> tag
+	-Download and serve (development)
+		-Allows you to work locally without an internet connection
+		-May be faster than a cdn
+	-Use a cdn (production)
+		-User may have it cached, saves on page weight
+		-http://code.jquery.com/jquery-1.10.2.min.js
+	-Can be included at the bottom of your html content
+	-Or, if included in the head, code you want to run when content is complete needs to be inside one of these:
+		$(document).ready(function() {
+		  // Handler for .ready() called.
+		});
+		Which we'll cover in more detail, later.
+	*Do this on your sample file, refresh the page in the browser, and re-run the jQuery version of the command.
+Example
+	<p>Welcome!</p>
+	$('p').addClass('special');
+	<p class="special">Welcome!</p>
+	- $ 		-Global jQuery function. Alternately "jQuery"
+	- ('p')		-argument being passed into the global jQuery function. In this case, a selector to return all 'p' elements. Returns an object: jQuery collection/object ~ array
+	- addClass 	-jQuery method to add the specified class to each element in the collection 
+				-http://api.jquery.com/addClass/
+Selectors
+	-All CSS selectors are valid, plus some extras
+	-examples
+	-http://api.jquery.com/category/selectors/
+	*Select some elements in your sample file.
+	*Use the index number to specify just one
+Filters
+	-Create a new jQuery collection from members of an original collection that pass a check
+	var collection = $('input');
+	var inputNotRadio = $(collection).not('[type="radio"]');
+	var inputError = $(collection).filter('.error');
+	var inputIsPA = $(collection).filter(function(){
+		return $(this).val() === 'PA';
+	});
+Functions & variables
+	var inputIsPA = $(collection).filter(function(){
+		return $(this).val() === 'PA';
+	});
+	Variables are containers for data. The value may change (thus "variable").
+	Functions are reusable pieces of code that do something and may return a value. Can contain variables and other functions.
+	*Assign a collection of selected elements to a variable, then filter it.
+Creating elements
+Reading elements & their properties
+	<a href="http://www.google.com" style="color: green;">Google</a>
+	$('a').html(); 			=> "Google"
+	$('a').attr('href'); 	=> "http://www.google.com"
+	$('a').css('color');	=> "green"
+	*Read some element properties
+Changing elements & their properties
+	<a href="http://www.google.com" style="color: green;">Google</a>
+	$('a').html('Yahoo!')
+	$('a').attr('href', 'http://www.yahoo.com')
+	$('a').css({'color': 'purple'})
+	-Chaining
+	$('a').html('Yahoo').attr('href','http://www.yahoo.com').css({'color':'purple'});
+	-Each function returns the collection again.
+	-This is ok when we know we have just one link on the page, but what happens when there are more?
+		*Run $('a').append('!');
+		-Better selector, or specify index
+EXERCISE!!
+	-For all external links, add an external icon to the end, and make the text blue.
+Why this is less than ideal
+	-Difficult to trace back/maintain
+	-Modifying text and SEO
+Looping
+	-Many built-in methods include implicit iteration
+	-Explicit iteration is for more complex tasks to be run on each member of a collection
+	$('img.profile-pic').each(function(index){
+		if($(this).width() < $(this).height()){
+			$(this).css({'border':'solid 3px red'});
+		} else {
+            $(this).css({'border':'solid 3px blue'});
+        }
+	});
+	*What does this function do?
+	-index: the function supplied to "each" is automatically passed the index of each member of the collection, while iterating. Other built-in methods are sometimes passed other pertinent data.
+	-explain if/else
+	
+
+Events
+	-click
+	-mouseEnter/Leave
+	-submit
+	-scroll/resize
+	-Many more: http://api.jquery.com/category/events/
+Binding handlers
+	function onButtonClick() {
+	  console.log('clicked!');
+	}
+
+	$('#button').on('click', onButtonClick);
+---
+	$('#button').on('click', function () {
+	  console.log('clicked!');
+	});
+---
+	$('a').on('click', function (event) {
+        event.preventDefault();
+        console.log('Not going there!');
+	});
+	-event: event handlers are typically passed the event that has triggered them, so that data can be used by the handler. See info on the event object: http://api.jquery.com/category/events/event-object/
+	*add console log messages on mouseEnter/mouseLeave for all names
+Document readiness
+	$(document).ready(function() {
+	  // Handler for .ready() called.
+	});
+	$(function() {
+	  // Handler for .ready() called.
+	});
+	-Explain file parsing/rendering
+
+Built-in Effects and Animation
+	-show/hide/toggle
+	-slideUp/slideDown/slideToggle
+	-fadeIn/fadeOut/fadeToggle/fadeTo
+Animation controls
+	-delay
+	-stop
+	-finish
+	-queue
+Custom animation
+	-.animate( properties [, duration ] [, easing ] [, complete ] );
+	$('p.special').animate(
+		{height:'500',fontSize:'3em'},
+		4000,
+		'linear', 
+		function(){
+			alert('done!');
+		}
+	);
+	*when clicking the profile photo, hide, show, or animate the contact info
+Notes
+	-A lot of these features are possible through CSS3, but jQuery is supported on older browsers
+	-Also, jQuery allows you to trigger effects on elements other than the one being interacted with
+
+jQuery UI & Plugins
+	-jQuery UI offers more advanced interaction methods. Very well documented.
+	-jQuery is open source and widely used, so there are many many plugins available (of varying quality and levels of documentation)
+	-date pickers, slideshows, and accordions (oh my!)
+	-http://plugins.jquery.com/
+Using Plugins
+	-Download the plugin and associated files from the site or github repo.
+	-Copy them into your project folder.
+	-In the HTML, reference any associated CSS files.
+	-In the HTML, add a <script> tag for the jQuery plugin itself.
+	-In the JavaScript, call the jQuery plugin on your DOM.
+	*add the "sortable" functionality from jQuery UI to the nav links
+
+AJAX
+	-Asynchronous javascript and xml
+	-Used for any communication to the servers without a page refresh
+		-form submissions
+		-adding items to your shopping cart
+		-updating twitter/facebook feeds
+	-jQuery ajax method allows for JSONP
+	*Look at GDI ajax request to meetup
+
+

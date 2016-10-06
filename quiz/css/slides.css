@@ -1,0 +1,13 @@
+p.center {text-align: center;}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {letter-spacing: 0;}
+.reveal section img {padding: 10px;}
+section p {text-align: left;}
+section#.twoColumns p {overflow: auto;}
+section.twoColumns p span { float:left; display:block; text-align:left;}
+section.twoColumns p span.blue {clear: left;}
+section#anatomy2 p span {width:78%;}
+section#anatomy2 p span.blue {width: 22%;}
+section#selectors p span {width:72%;}
+section#selectors p span.blue {width: 28%;}
+section#creating p span.blue {width: 43%;}
+section#reading p span.blue {width: 43%;}

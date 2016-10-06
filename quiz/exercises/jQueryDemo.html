@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Intro Sample</title>
+<link href="assets/styles.css" type="text/css" media="screen" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="header">
+			<h2>Girl Develop It</h2>
+			<nav>
+				<ul>
+					<li><a href="#">Nav Item 1</a></li>
+					<li><a href="#">Nav Item 2</a></li>
+					<li><a href="#">Nav Item 3</a></li>
+					<li><a href="#">Nav Item 4</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header"></div>
+		<div id="main">
+			<section class='people' id='leaders'>
+				<h3>Leaders</h3>
+				<article>
+					<h4>Yasmine Mustafa</h4>
+					<img class='profile-pic' alt="Yasmine Mustafa" src="assets/yasminemustafa-5c85d5cbe6da427c6a0857e0d69fd926.png" />
+					<div class='bio'>
+						<p>As a business person, Yasmine became involved with Girl Develop It when she started her software company and quickly determined she needed to learn how to code. Soon after, she sold her Company to NetLine Corporation where is currently the Product Marketing Manager.</p>
+						<p>In addition, Yasmine serves on the advisory board of TechGirlz, an organization focused on encouraging middle-school females to pursue careers in technology.</p>
+					</div>
+					<div class='contact'>
+						<h4>Contact me:</h4>
+						<p>
+							Twitter:
+							<a href="http://www.twitter.com/myasmine" alt="Yasmine Mustafa on Twitter" target="_blank">@myasmine</a>
+						</p>
+						<p>
+							Email:
+							<a href="mailto:yasmine@girldevelopit.com" alt="Email Yasmine Mustafa" target="_blank">yasmine@girldevelopit.com</a>
+						</p>
+						<p>
+							Website:
+							<a href="http://myasmine.com" alt=" Yasmine Mustafa Website" target="_blank">http://myasmine.com</a>
+						</p>
+					</div>
+				</article>
+				<article>
+					<h4>Corinne Warnshuis</h4>
+					<img class='profile-pic' alt="Corinne Warnshuis" src="assets/corinnewarnshuis-481f9fb2e93f326b302d836cbd9b95da.jpg" />
+					<div class='bio'>
+						<p>Corinne is the co-leader of Girl Develop It Philly. She moved to South Philadelphia two years ago after graduating from University of California, Santa Cruz. She is the Events Coordinator for the Technical.ly news network, an online publication that covers technology and hosts regular events in Philly, Baltimore and Brooklyn. Previously, she worked in the community relations department at WHYY and wrote freelance for Newsworks and Flying Kite. Corinne also sits on the Board of Directors for the Prometheus Radio Project. In her spare time, she loves sewing, playing with her cats and watching documentaries.</p>
+					</div>
+					<div class='contact'>
+						<h4>Contact me:</h4>
+						<p>
+						Twitter:
+						<a href="http://www.twitter.com/corinnepw" alt="Corinne Warnshuis on Twitter" target="_blank">@corinnepw</a>
+						</p>
+					</div>
+				</article>
+				<article>
+					<h4>Lisa Burgess</h4>
+					<img class='profile-pic' alt="Lisa Burgess" src="assets/lisaburgess-9554620b76bed4cdbca3bec26f32cead.png" />
+					<div class='bio'>
+						<p>Lisa Burgess, our newest co-organizer at GDI Philly, works at Uhuru Furniture & Collectibles as the Marketing Coordinator. She is pursuing a Web Design & Development certificate at the University of the Arts. Joining the Girl Develop It team has brought together Lisa's non-profit experience with her love for the web. Lisa is also passionate about social justice, social dancing and loves spending time outdoors. Her Twitter handle is appropriately named @CSSLovinn.</p>
+					</div>
+					<div class='contact'>
+						<h4>Contact me:</h4>
+						<p>
+						Twitter:
+						<a href="http://www.twitter.com/CSSLovinn" alt="Lisa Burgess on Twitter" target="_blank">@CSSLovinn</a>
+						</p>
+					</div>
+				</article>
+			</section>
+			<section class='people' id='teachers'>
+				<h3>Teachers</h3>
+				<article class='person'>
+					<h4>Elise Wei</h4>
+					<img class='profile-pic' alt="Elise Wei" src="assets/elisewei-45bd1fa0a9d0dcbb3e6431947c5ed8f1.jpg" />
+					<div class='bio'>
+						<p>Elise is a tech lead and front-end engineer at Monetate. Her specialties include HTML, JavaScript, and CSS, though she also has experience in PHP, VB, and C#. She has been working with Girl Develop It for the past year, teaching and assisting in numerous classes. She is a new mom, a crafter, a musician, and operates what her husband refers to as the 'gluten-free test kitchen' out of their home. You may have seen her fronting a rock band, presenting at the 2012 Geek Awards, or volunteering at other women-in-tech events around the city.</p>
+					</div>
+					<div class='contact'>
+						<h4>Contact me:</h4>
+						<p>
+						Twitter:
+						<a href="http://www.twitter.com/Not_Pele" alt="Elise Wei on Twitter" target="_blank">@Not_Pele</a>
+						</p>
+					</div>
+				</article>
+			</section>
+		</div>
+		<footer>
+		</footer>
+	</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	$('<p>Welcome!</p>')
+	.css({'float': 'left', 'background-color': 'red'})
+	.addClass('special')
+	.appendTo('div.header');
+	</script>
+</body>
+</html>
