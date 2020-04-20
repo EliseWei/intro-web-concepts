@@ -1,6 +1,6 @@
 # Intro to Web Concepts
 
-Slides and materials are hosted at [http://gdiphilly.github.io/intro-web-concepts/](http://gdiphilly.github.io/intro-web-concepts/).
+Slides and materials are hosted at [http://elisewei.github.io/intro-web-concepts/](http://elisewei.github.io/intro-web-concepts/).
 
 ## Course description
 
@@ -10,8 +10,6 @@ Tired of techies throwing around acronyms that make your head spin?
 
 If you are a complete beginner to coding and/or want to learn how to communicate better with your technical team/friends, this workshop is for you. In this class, we will walk through the fundamentals of web development in layman's terms. While we won't be writing code, we'll take you through various components of the web and how they work together. 
 
-
-**Cost: $25** 
 
 **Course length: 2hrs**
 
@@ -37,5 +35,5 @@ Topics include but are not limited to:
  - What language should you use and what are the differences?
  - What tools do you need to develop a web site?
  - Who does what on a typical web development team?
- - What are Web 2.0 and the Cloud?
+ - What is the Cloud?
 
